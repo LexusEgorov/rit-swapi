@@ -1,0 +1,24 @@
+<div class="popup-container"
+    *ngIf="isOpen">
+    <div class="popup-body"
+        tabindex="0"
+        (keydown.esc)="closeHandler()">
+        <div class="popup-content"
+            [ngStyle]="{'background-image': getImage()}">
+            <header class="popup-content-header">
+                <select name="gender" id="gender-select" [(ngModel)]="filterValue">
+                    <option value="">По умолчанию</option>
+                    <option value="male">Мужской</option>
+                    <option value="female">Женский</option>
+                </select>
+                <a class="close" (click)="closeHandler()"></a>
+            </header>
+            <section class="popup-content-body">
+                <app-person-card 
+                    *ngFor="let person of data.residents | filter:filterValue"
+                    [person] = "person"
+                ></app-person-card>
+            </section>
+        </div>
+    </div>
+</div>

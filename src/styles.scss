@@ -1,1 +1,29 @@
-/* You can add global styles to this file, and also import other style files */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+html,
+body{
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    
+    .wrapper{
+        background-image: url(./assets/images/bg.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .app-container{
+            padding: 10px;
+            width: 80%;
+            margin: auto;
+            box-sizing: border-box;
+        }
+    }
+
+}

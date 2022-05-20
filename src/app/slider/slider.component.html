@@ -1,0 +1,14 @@
+<swiper 
+    #swiper
+    data-reload="true"
+    [slidesPerView]="countSlides"
+    [slidesPerGroup]="countSlides"
+    [spaceBetween]="30"
+    class="mySwiper"
+  >
+  <ng-template swiperSlide *ngFor="let planet of planets">
+    <app-card [data] = "planet" (onPopup)="openPopup($event)"></app-card>
+  </ng-template>
+  
+</swiper>
+
